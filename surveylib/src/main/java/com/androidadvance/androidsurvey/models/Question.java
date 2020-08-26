@@ -37,6 +37,9 @@ public class Question implements Serializable {
     @SerializedName("number_of_lines")
     @Expose
     private Integer numberOfLines;
+    @SerializedName("number_of_chars")
+    @Expose
+    private Integer numberOfChars;
 
     /**
      *
@@ -199,5 +202,22 @@ public class Question implements Serializable {
     public void setNumberOfLines(Integer numberOfLines) {
         this.numberOfLines = numberOfLines;
     }
+	
+    /**
+     *
+     * @return
+     * The numberOfChars
+     */
+    public Integer getNumberOfChars() {
+        return numberOfChars;
+    }
 
+    /**
+     *
+     * @param numberOfChars
+     * The number_of_chars
+     */
+    public void setNumberOfChars(Integer numberOfChars) {
+        this.numberOfChars = numberOfChars;
+    }
 }

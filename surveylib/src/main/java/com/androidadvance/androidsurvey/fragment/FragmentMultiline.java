@@ -65,7 +65,7 @@ public class FragmentMultiline extends Fragment {
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    if (s.length() > 3) {
+                    if (s.length() >= q_data.getNumberOfChars()) {
                         button_continue.setVisibility(View.VISIBLE);
                     } else {
                         button_continue.setVisibility(View.GONE);
