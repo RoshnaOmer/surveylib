@@ -54,7 +54,7 @@ public class FragmentTextSimple extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         mContext = getActivity();
-        Question q_data = (Question) getArguments().getSerializable("data");
+        final Question q_data = (Question) getArguments().getSerializable("data");
 
         if (q_data.getRequired()) {
             button_continue.setVisibility(View.GONE);
