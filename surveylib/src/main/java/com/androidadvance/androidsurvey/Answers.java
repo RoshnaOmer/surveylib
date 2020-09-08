@@ -13,7 +13,7 @@ public class Answers {
 
 
     public Answers() {
-        answered_hashmap.put("test1","test2");
+        answered_hashmap = new LinkedHashMap<>();
     }
 
     public void put_answer(String key, String value) {
