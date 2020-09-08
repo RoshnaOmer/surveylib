@@ -9,10 +9,11 @@ import java.util.LinkedHashMap;
 
 public class Answers {
     private volatile static Answers uniqueInstance;
-    private final LinkedHashMap<String, String> answered_hashmap = new LinkedHashMap<>();
+    private LinkedHashMap<String, String> answered_hashmap = new LinkedHashMap<>();
 
 
     private Answers() {
+        answered_hashmap = new LinkedHashMap<>();
     }
 
     public void put_answer(String key, String value) {
@@ -21,7 +22,7 @@ public class Answers {
 
     public String get_json_object() {
         Gson gson = new Gson();
-        return gson.toJson(answered_hashmap,LinkedHashMap.class);
+        return gson.toJson(answered_hashmap, LinkedHashMap.class);
     }
 
     @Override
