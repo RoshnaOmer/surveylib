@@ -12,8 +12,7 @@ public class Answers {
     private LinkedHashMap<String, String> answered_hashmap = new LinkedHashMap<>();
 
 
-    private Answers() {
-        answered_hashmap = new LinkedHashMap<>();
+    public Answers() {
     }
 
     public void put_answer(String key, String value) {
@@ -28,6 +27,10 @@ public class Answers {
     @Override
     public String toString() {
         return String.valueOf(answered_hashmap);
+    }
+
+    public static void setInstance(Answers instance) {
+        uniqueInstance = instance;
     }
 
     public static Answers getInstance() {

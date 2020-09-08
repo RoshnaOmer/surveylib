@@ -34,7 +34,6 @@ public class SurveyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_survey);
 
 
-
         if (getIntent().getExtras() != null) {
             Bundle bundle = getIntent().getExtras();
             mSurveyPojo = new Gson().fromJson(bundle.getString("json_survey"), SurveyPojo.class);
@@ -142,6 +141,7 @@ public class SurveyActivity extends AppCompatActivity {
         Intent returnIntent = new Intent();
         returnIntent.putExtra("answers", instance.get_json_object());
         setResult(Activity.RESULT_OK, returnIntent);
+        Answers.setInstance(new Answers());
         finish();
     }
 }
